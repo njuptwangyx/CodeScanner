@@ -239,7 +239,7 @@
 }
 
 - (void)stopRunning {
-    if ([_timer isValid] == YES ) {
+    if ([_timer isValid]) {
         [_timer invalidate];
         _timer = nil ;
     }
@@ -271,7 +271,7 @@
         frame.origin.y = _height;
         self.lineImageView.frame = frame;
         [UIView commitAnimations];
-    } else if (_height==Y){
+    } else if (_height == Y){
         [UIView beginAnimations: @"asa" context:nil];
         [UIView setAnimationDuration:1.5];
         CGRect frame = self.lineImageView.frame;
